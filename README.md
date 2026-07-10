@@ -49,7 +49,7 @@ Step 2: Corrected data type
 
 The following column was formatted according to their appropriate data type.
 	
-	Column:	                Format Applied  
+	    Column	                Format Applied  
 		Hire Date       		Date
 		Salary                 Currency
 		Performance Score		Number
