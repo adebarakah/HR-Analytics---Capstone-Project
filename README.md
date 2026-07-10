@@ -1,18 +1,11 @@
 # HR-Analytics---Capstone-Project
-# Executive summary
+# Executive Summary
 ---
-HR Analytics Project built in Microsoft Excel, showcasing data cleaning, advanced Excel formulas, Pivot Tables, and an interactive dashboard for HR analysis. The dashboard provides insights into the organization's workforce of 150 employees, employee performance, compensation, and attrition. The analysis reveals a stable workforce with a 16% attrition rate, identifies Operations as the department wit
+HR Analytics Project built in Microsoft Excel, showcasing data cleaning, advanced Excel formulas, Pivot Tables, and an interactive dashboard for HR analysis. The dashboard provides insights into the organization's workforce of 150 employees, employee performance, compensation, and attrition. The analysis reveals a workforce of 150 employees with an average salary of $83,341 and a 16% overall attrition rate, identifies Operations as the department with the greatest retention challenge, highlights Marketing as the highest-performing department, and demonstrates that the organization's performance-based bonus structure effectively rewards employee performance.
 
-This HR Analytics project transformed a messy HR dataset into an interactive Excel dashboard that provides insights into workforce headcount, salary distribution, departmental attrition, employee performance, and projected bonus payouts. The analysis reveals a workforce of 150 employees with an average salary of $83,341 and a 16% overall attrition rate, identifies Operations as the department with the greatest retention challenge, highlights Marketing as the highest-performing department, and demonstrates that the organization's performance-based bonus structure effectively rewards employee performance.
-
-## Project Overview
----
-This HR Analytics project was built in Microsoft Excel and showcases data cleaning, advanced formulas, Pivot Tables, and an interactive dashboard to analyze workforce, performance, compensation, and attrition.
-
-## Dataset overview
+## Dataset Overview
 ---
 The HR dataset contains employee information including:
-
 Employee ID
 Employee Name
 Department Code
@@ -23,74 +16,92 @@ Employment Status
 Department Lookup Table
 
 Upon reviewing the dataset, I observed the following:
-
 The dataset required cleaning and standardization. The following data quality issues were Identified;
--Employee First and Last names were stored in separate columns with missing records in the First_Name columns.
--Departments were represented using department codes rather than department names.
--Some text fields contained inconsistent capitalization (e.g., Department Codes and Employment Status → active, ACTIVE, Actv, LEFT).
--There were unnecessary leading and trailing spaces in some text fields, particularly in department codes.
--Hire dates and Salary values required consistent column formatting.
--Some records had missing Salary values and Performance Scores.
--There were duplicate records in the data.
-Lookup tables were provided separately for Departments and Performance Ratings. 
-Performance bands and bonus percentages needed to be derived from lookup tables.
 
-This exploration is necessary to determine the order in which the cleaning process should be carried out.
+- Employee First and Last names were stored in separate columns with missing records in the First_Name columns.
 
-## Data cleaning Process
----
+- Departments were represented using department codes rather than department names.
+
+- Some text fields contained inconsistent capitalization (e.g., Department Codes and Employment Status → active, ACTIVE, Actv, LEFT).
+
+- There were unnecessary trailing spaces in some text fields, particularly in department codes.
+
+- Hire dates and Salary values required consistent column formatting.
+
+- Some records had missing Salary values and Performance Scores.
+
+- There were duplicate records in the data.
+
+- Lookup tables were provided separately for Departments and Performance Ratings. 
+
+- Performance bands and bonus percentages needed to be derived from lookup tables.
+
+Exploring the data wasnecessary to determine the cleaning process to be carried out.
+
+## Data Cleaning Process
 Before meaningful analysis could be performed, the following steps were followed to clean the data
+
 Step 1: Removed Duplicate Data
 The first step was to check for duplicate employee records to avoid incorrect analysis and misleading insights.
 7 records, out of the 157 records were identified as duplicate and removed using the 'Remove Duplicate' feature, leaving us with 150 records to work with. 
 
 Step 2: Corrected data type 
 The following column was formatted according to their appropriate data type.
-
 Column	                Format Applied
-Hire Date	        Date
+Hire Date	       		Date
 Salary	                Currency
-Performance Score	Number
-Years of Service	Number
+Performance Score		Number
+Years of Service		Number
 Bonus Amount	        Currency
 
 Step 3: Handled Missing Values
 
-To preserve as many employee records as possible while maintaining data quality, I made the following assumptions:
--Missing performance scores were replaced using the overall average performance score using →  =Average(G2:G151)
--Missing salary values were replaced using the average salary of the employee's department. This was calculated using the Average IF function 
+- Missing performance scores were replaced using the overall average performance score using →  =Average(G2:G151)
+
+- Missing salary values were replaced using the average salary of the employee's department. This was calculated using the Average IF function 
 	→ =AverageIF(C2:C151,HR01,F2:F151)
--To handle the mising records in the First Name Column, a new Full_Name column was directly created using the Text Join Function E.g, =TEXTJOIN(" ",FALSE,B2,C2); 
-This produced a single full name combing column B2 & C2 while automatically inserting a space between both names and leaving the Last name as the full name for missing records. 
-And it was done to avoid fabricating employee information. Combining employing names was also necessary to improve readability and reporting.
+	
+- To handle the mising records in the First Name Column, a new Full_Name column was directly created using the Text Join Function E.g, 		→ =TEXTJOIN(" ",FALSE,B2,C2); 
+This produced a single full name combing column B2 & C2 while automatically inserting a space between both names and leaving the Last name as the full name for missing records. This was done to avoid fabricating employee information. Combining employing names was also necessary to improve readability and reporting.
 
 Step 4: Standardized Text Values
-Inconsistence text cases in the Department_Code coloumn was resolved using the Upper function. → =UPPER()
-Value field in Employment_status column was handled using the Find & Replace Excel feature. Abbreviations and text (e.g., Actv, ACTIVE, LEFT) was standardized to 'Active' and 'Left'.
-Unnecessary trailing spaces in the Full_Name and Department_code Column was handled Using the Trim & Clean function. → =TRIM(CLEAN(C2))
+- Inconsistence text cases in the Department_Code coloumn was resolved using the Upper function. → =UPPER()
+
+- Value field in Employment_status column was handled using the Find & Replace Excel feature. 
+Abbreviations and text (e.g., Actv, ACTIVE, LEFT) was standardized to 'Active' and 'Left'.
+
+- Unnecessary trailing spaces in the Full_Name and Department_code Column was handled Using the Trim & Clean function. → =TRIM(CLEAN(C2))
 
 ##Data Transformation & Calculated Columns
--Department names were returned from the Lookup table, Using the XLOOKUP Function,
+- Department names were returned from the Lookup table, Using the XLOOKUP Function,
 	→ (=XLOOKUP(D2,Lookup_Departments!$A$2:$A$7,Lookup_Departments!$B$2:$B$7,"Invalid Dept_Code",0). 
 The department codes served as the look-up value to derive corresponding department names.
--Performance_Band Column was created, using the Ifs Function to categorise employees by performance score range =IFS(G2<=49"Needs Improvement",G2<=69,"Developing",G2<=84"Achieving",G2<=94,"Exceeding",G2<=100,"Outstanding)
--Employees Bonus Percentage was imported from the Department lookup table using XLookup Function.
+
+- Performance_Band Column was created, using the Ifs Function to categorise employees by performance score range =IFS(G2<=49"Needs Improvement",G2<=69,"Developing",G2<=84"Achieving",G2<=94,"Exceeding",G2<=100,"Outstanding)
+
+- Employees Bonus Percentage was imported from the Department lookup table using XLookup Function.
 	→ =XLOOKUP(K8,Lookup_Performance!$C$2:$C$6,Lookup_Performance!$D$2:$D$6,"N/A",0)
--Bonus Payout were calculated using Salary * Bonus Percentage
--Years of Service was calculated From Hire Date using the Dated If functions 
+	
+- Bonus Payout were calculated using Salary * Bonus Percentage
+
+- Years of Service was calculated From Hire Date using the Dated If functions 
 	→ =DATEDIF(E2,TODAY(),"Y")
--The year was extracted from the hire date using;
+	
+- The year was extracted from the hire date using;
 	=TEXT(Hire Date,"yyyy")
 
-##Challenges encountered 
--One of the main challenges was dealing with incomplete records. Instead of removing incomplete records—which would have led to incomplete dataset and biased analysis, values that could reasonably be derived from existing information were completed. 
+##Challenges Encountered 
+- One of the main challenges was dealing with incomplete records. Instead of removing incomplete records—which would have led to incomplete dataset and biased analysis; 
 I used average imputation where appropriate and only . 
 No employee name was fabricated.
--Hidden spaces and varying text cases initially affected lookup results, but applying the TRIM, CLEAN, and PROPER functions resolved these issues.
--Inconsistent Date format; After formatting cell as Date using the DD/MM/YY format, some date cell was still showing error, 
+
+- Hidden spaces and varying text cases initially affected lookup results, but applying the TRIM, CLEAN, and PROPER functions resolved these issues.
+  
+- Inconsistent Date format; After formatting cell as Date using the DD/MM/YY format, some date cell was still showing error, 
 This was resolved by changing the location entirely following thestep → 'Cell Format' → Date → Change Located → Date Type to DD/MM/YYYY to maintain consistency. 
--Another challenge encountered was calculating the attrition rate by department using Pivot Tables. 
-Excel did not directly calculate the percentage of employees with a "Left" status against the total number of employees in each department. To overcome this, I included all employee status categories (Active, Left, and Resigned) in the Pivot Table and displayed the values as % of Row Total. This allowed me to identify the percentage of employees with a "Left" status for each department, which represented the departmental attrition rate (e.g., Operations: 20.69%, Finance: 17.65%, Marketing: 15.79%).
+
+- Another challenge encountered was calculating the attrition rate by department using Pivot Tables. 
+Excel did not directly calculate the percentage of employees with a "Left" status against the total number of employees in each department. To overcome this, all employee status categories (Active, Left, and Resigned) were included in the Pivot Table and the values were displayed as % of Row Total. This allowes to identify the percentage of employees with a "Left" status for each department, which represented the departmental attrition rate (e.g., Operations: 20.69%, Finance: 17.65%, Marketing: 15.79%).
 
 →	Microsoft Excel Tools Used 
 - Pivot Tables
