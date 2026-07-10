@@ -145,7 +145,7 @@ Excel did not directly calculate the percentage of employees with a "Left" statu
 
 ## Performance Analysis Insights
 
-![HR Dashboard-Performance](images/HR_Dashboard_Salary2.png)
+![HR Dashboard-Performance](Image/HR_Dashboard_Salary2.png)
 
 The organization's average performance score is 68.1, indicating that employee performance is generally satisfactory across all departments. Most employees fall within the Developing and Achieving performance bands, suggesting that while many employees are meeting expectations, there is still room for performance growth.
 
