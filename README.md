@@ -182,11 +182,13 @@ The organization's average performance score is 68.1, indicating that employee p
 -18.67% of employees fall under Needs Improvement, highlighting the need for targeted coaching and employee development.
 
 - The organization projects a total bonus payout of $485,381.72, with bonuses awarded based on employee performance.
-          Performance Band:	Total Bonus Achieving:			$164,690.80
-			Exceeding:			$144,880.50
-			Outstanding:		$91,326.24
-			Developing:			$84,484.20
-			Needs Improvement:	$0.00
+
+        Performance Band    	Total Bonus
+            Achieving			$164,690.80
+			Exceeding			$144,880.50
+			Outstanding		    $91,326.24
+			Developing			$84,484.20
+			Needs Improvement	$0.00
 
 →	Departmental Bonus Analysis
 - Despite not having the highest average performance score, Information Technology receives the highest bonus payout because it has the largest workforce.
@@ -196,7 +198,11 @@ The organization's average performance score is 68.1, indicating that employee p
 # Recommendation
 ---
 Operations should be prioritized for retention initiatives due to its significantly higher turnover and resignation rates.
+
 Strengthen performance coaching in Sales by introducing regular feedback sessions, mentoring, and targeted training to improve employee performance.
+
 Recognize and retain high-performing employees by continuing to reward Exceeding and Outstanding performers while creating career development opportunities to sustain high performance.
+
 Review departmental workforce and bonus allocation, particularly in Information Technology, to ensure bonus expenditure continues to align with both workforce size and performance outcomes.
+
 Adopt best practices from Marketing and Human Resources, the highest-performing departments, and replicate successful performance management strategies across other departments.
