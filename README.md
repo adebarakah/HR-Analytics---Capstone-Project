@@ -48,13 +48,14 @@ The first step was to check for duplicate employee records to avoid incorrect an
 Step 2: Corrected data type 
 
 The following column was formatted according to their appropriate data type.
-		Column:	                Format Applied
-		Hire Date:	       		Date
-		Salary:                 Currency
-		Performance Score:		Number
-		Years of Service:		Number
-		Bonus Amount:	        Currency
-
+	
+	Column:	                Format Applied  
+		Hire Date       		Date
+		Salary                 Currency
+		Performance Score		Number
+		Years of Service		Number
+		Bonus Amount	        Currency
+		
 Step 3: Handled Missing Values
 
 - Missing performance scores were replaced using the overall average performance score using →  =Average(G2:G151)
@@ -151,6 +152,7 @@ The organization's average performance score is 68.1, indicating that employee p
 
 -The average score suggests that most employees fall within the Achieving and Developing performance categories.
 →	Average Performance Score by Department
+						
 						Department:					Average Performance Score
 						Marketing:					73.2
 						Human Resources:			71.0
@@ -166,6 +168,7 @@ The organization's average performance score is 68.1, indicating that employee p
 - The relatively small variation in scores across departments suggests that employee performance is fairly consistent throughout the organization.
 
 →	Employee Performance Distribution
+				
 				Performance Band:		Percentage
 				Developing:				32.67%
 				Achieving:				27.33%
@@ -179,8 +182,7 @@ The organization's average performance score is 68.1, indicating that employee p
 -18.67% of employees fall under Needs Improvement, highlighting the need for targeted coaching and employee development.
 
 - The organization projects a total bonus payout of $485,381.72, with bonuses awarded based on employee performance.
-			Performance Band:	Total Bonus
-			Achieving:			$164,690.80
+          Performance Band:	Total Bonus Achieving:			$164,690.80
 			Exceeding:			$144,880.50
 			Outstanding:		$91,326.24
 			Developing:			$84,484.20
