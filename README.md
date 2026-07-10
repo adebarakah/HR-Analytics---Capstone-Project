@@ -92,7 +92,7 @@ The department codes served as the look-up value to derive corresponding departm
 - The year was extracted from the hire date using;
 	=TEXT(Hire Date,"yyyy").
 
-##Challenges Encountered 
+## Challenges Encountered 
 - One of the main challenges was dealing with incomplete records. Instead of removing incomplete records—which would have led to incomplete dataset and biased analysis:
 I used average imputation where appropriate and only . 
 No employee name was fabricated.
