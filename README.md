@@ -120,7 +120,7 @@ Excel did not directly calculate the percentage of employees with a "Left" statu
 ---
 ## Overall Workforce Analysis Insights
 
-![HR Dashboard-Workforce](images/HR_Dashboard_Workforce.png)
+![HR Dashboard-Workforce](Image/HR_Dashboard_Workforce.png)
 
 - The company employs 150 people across all six departments with an average salary of $83,341.
 
