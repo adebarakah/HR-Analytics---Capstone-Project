@@ -6,13 +6,21 @@ HR Analytics Project built in Microsoft Excel, showcasing data cleaning, advance
 ## Dataset Overview
 ---
 The HR dataset contains employee information including:
+
 Employee ID
+
 Employee Name
+
 Department Code
+
 Hire Date
+
 Salary
+
 Performance Score
+
 Employment Status
+
 Department Lookup Table
 
 Upon reviewing the dataset, I observed the following:
