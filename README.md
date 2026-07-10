@@ -48,21 +48,21 @@ The first step was to check for duplicate employee records to avoid incorrect an
 Step 2: Corrected data type 
 
 The following column was formatted according to their appropriate data type.
-Column	                Format Applied
-Hire Date	       		Date
-Salary	                Currency
-Performance Score		Number
-Years of Service		Number
-Bonus Amount	        Currency
+		Column:	                Format Applied
+		Hire Date:	       		Date
+		Salary:                 Currency
+		Performance Score:		Number
+		Years of Service:		Number
+		Bonus Amount:	        Currency
 
 Step 3: Handled Missing Values
 
 - Missing performance scores were replaced using the overall average performance score using →  =Average(G2:G151)
 
 - Missing salary values were replaced using the average salary of the employee's department. This was calculated using the Average IF function 
-	→ =AverageIF(C2:C151,HR01,F2:F151)
+	→ =AverageIF(C2:C151,HR01,F2:F151).
 	
-- To handle the mising records in the First Name Column, a new Full_Name column was directly created using the Text Join Function E.g, 		→ =TEXTJOIN(" ",FALSE,B2,C2) 
+- To handle the mising records in the First Name Column, a new Full_Name column was directly created using the Text Join Function E.g, 		→ =TEXTJOIN(" ",FALSE,B2,C2).
 This produced a single full name combing column B2 & C2 while automatically inserting a space between both names and leaving the Last name as the full name for missing records. This was done to avoid fabricating employee information. Combining employing names was also necessary to improve readability and reporting.
 
 Step 4: Standardized Text Values
@@ -78,18 +78,18 @@ Abbreviations and text (e.g., Actv, ACTIVE, LEFT) was standardized to 'Active' a
 	→ (=XLOOKUP(D2,Lookup_Departments!$A$2:$A$7,Lookup_Departments!$B$2:$B$7,"Invalid Dept_Code",0). 
 The department codes served as the look-up value to derive corresponding department names.
 
-- Performance_Band Column was created, using the Ifs Function to categorise employees by performance score range =IFS(G2<=49"Needs Improvement",G2<=69,"Developing",G2<=84"Achieving",G2<=94,"Exceeding",G2<=100,"Outstanding)
+- Performance_Band Column was created, using the Ifs Function to categorise employees by performance score range =IFS(G2<=49"Needs Improvement",G2<=69,"Developing",G2<=84"Achieving",G2<=94,"Exceeding",G2<=100,"Outstanding).
 
 - Employees Bonus Percentage was imported from the Department lookup table using XLookup Function.
-	→ =XLOOKUP(K8,Lookup_Performance!$C$2:$C$6,Lookup_Performance!$D$2:$D$6,"N/A",0)
+	→ =XLOOKUP(K8,Lookup_Performance!$C$2:$C$6,Lookup_Performance!$D$2:$D$6,"N/A",0).
 	
-- Bonus Payout were calculated using Salary * Bonus Percentage
+- Bonus Payout were calculated using Salary * Bonus Percentage.
 
-- Years of Service was calculated From Hire Date using the Dated If functions 
-	→ =DATEDIF(E2,TODAY(),"Y")
+- Years of Service was calculated From Hire Date using the Dated If functions. 
+	→ =DATEDIF(E2,TODAY(),"Y").
 	
 - The year was extracted from the hire date using;
-	=TEXT(Hire Date,"yyyy")
+	=TEXT(Hire Date,"yyyy").
 
 ##Challenges Encountered 
 - One of the main challenges was dealing with incomplete records. Instead of removing incomplete records—which would have led to incomplete dataset and biased analysis:
@@ -151,13 +151,13 @@ The organization's average performance score is 68.1, indicating that employee p
 
 -The average score suggests that most employees fall within the Achieving and Developing performance categories.
 →	Average Performance Score by Department
-Department					Average Performance Score
-Marketing					73.2
-Human Resources				71.0
-Operations					69.9
-Finance						68.9
-Information Technology		65.4
-Sales						64.1
+						Department:					Average Performance Score
+						Marketing:					73.2
+						Human Resources:			71.0
+						Operations:					69.9
+						Finance:					68.9
+						Information Technology:		65.4
+						Sales:						64.1
 
 - This shows that Marketing records the highest average performance score, making it the overall best-performing department, followed by Human Resources.
 - 
@@ -166,12 +166,12 @@ Sales						64.1
 - The relatively small variation in scores across departments suggests that employee performance is fairly consistent throughout the organization.
 
 →	Employee Performance Distribution
-Performance Band		Percentage
-Developing				32.67%
-Achieving				27.33%
-Needs Improvement		18.67%
-Exceeding				14.67%
-Outstanding				6.67%
+				Performance Band:		Percentage
+				Developing:				32.67%
+				Achieving:				27.33%
+				Needs Improvement:		18.67%
+				Exceeding:				14.67%
+				Outstanding:			6.67%
 
 - The largest performance group falls in the in the Developing category.
 -27.33% of employees are Achieving, indicating that a significant proportion are meeting performance expectations.
@@ -179,12 +179,12 @@ Outstanding				6.67%
 -18.67% of employees fall under Needs Improvement, highlighting the need for targeted coaching and employee development.
 
 - The organization projects a total bonus payout of $485,381.72, with bonuses awarded based on employee performance.
-Performance Band	Total Bonus
-Achieving			$164,690.80
-Exceeding			$144,880.50
-Outstanding			$91,326.24
-Developing			$84,484.20
-Needs Improvement	$0.00
+			Performance Band:	Total Bonus
+			Achieving:			$164,690.80
+			Exceeding:			$144,880.50
+			Outstanding:		$91,326.24
+			Developing:			$84,484.20
+			Needs Improvement:	$0.00
 
 →	Departmental Bonus Analysis
 - Despite not having the highest average performance score, Information Technology receives the highest bonus payout because it has the largest workforce.
