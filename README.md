@@ -7,21 +7,21 @@ HR Analytics Project built in Microsoft Excel, showcasing data cleaning, advance
 ---
 The HR dataset contains employee information including:
 
-Employee ID
+-Employee ID
 
-Employee Name
+-Employee Name
 
-Department Code
+-Department Code
 
-Hire Date
+-Hire Date
 
-Salary
+-Salary
 
-Performance Score
+-Performance Score
 
-Employment Status
+-Employment Status
 
-Department Lookup Table
+-Department Lookup Table
 
 Upon reviewing the dataset, I observed the following:
 The dataset required cleaning and standardization. The following data quality issues were Identified;
