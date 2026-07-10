@@ -153,13 +153,13 @@ The organization's average performance score is 68.1, indicating that employee p
 -The average score suggests that most employees fall within the Achieving and Developing performance categories.
 →	Average Performance Score by Department
 						
-						Department:					Average Performance Score
-						Marketing:					73.2
-						Human Resources:			71.0
-						Operations:					69.9
-						Finance:					68.9
-						Information Technology:		65.4
-						Sales:						64.1
+						Department					Average Performance Score
+						Marketing					73.2
+						Human Resources 			71.0
+						Operations					69.9
+						Finance 					68.9
+						Information Technology		65.4
+						Sales						64.1
 
 - This shows that Marketing records the highest average performance score, making it the overall best-performing department, followed by Human Resources.
   
