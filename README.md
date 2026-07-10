@@ -1,7 +1,7 @@
 # HR-Analytics---Capstone-Project
 # Executive Summary
 ---
-HR Analytics Project built in Microsoft Excel, showcasing data cleaning, advanced Excel formulas, Pivot Tables, and an interactive dashboard for HR analysis. The dashboard provides insights into the organization's workforce of 150 employees, employee performance, compensation, and attrition. The analysis reveals a workforce of 150 employees with an average salary of $83,341 and a 16% overall attrition rate, identifies Operations as the department with the greatest retention challenge, highlights Marketing as the highest-performing department, and demonstrates that the organization's performance-based bonus structure effectively rewards employee performance.
+HR Analytics Project built in Microsoft Excel, showcasing data cleaning, advanced Excel formulas, Pivot Tables, and an interactive dashboard for HR analysis. The dashboard provides insights into the organization's workforce of 150 employees, performance, compensation, and attrition rate. The analysis reveals a workforce of 150 employees with an average salary of $83,341 and a 16% overall attrition rate, identifies Operations as the department with the greatest retention challenge, highlights Marketing as the highest-performing department, and demonstrates that the organization's performance-based bonus structure effectively rewards employee performance.
 
 ## Dataset Overview
 ---
@@ -162,9 +162,9 @@ The organization's average performance score is 68.1, indicating that employee p
 						Sales:						64.1
 
 - This shows that Marketing records the highest average performance score, making it the overall best-performing department, followed by Human Resources.
-- 
+  
 - Sales records the lowest average performance score, indicating a greater need for performance improvement initiatives.
-- 
+  
 - The relatively small variation in scores across departments suggests that employee performance is fairly consistent throughout the organization.
 
 →	Employee Performance Distribution
@@ -177,9 +177,12 @@ The organization's average performance score is 68.1, indicating that employee p
 				Outstanding:			6.67%
 
 - The largest performance group falls in the in the Developing category.
--27.33% of employees are Achieving, indicating that a significant proportion are meeting performance expectations.
--Only 6.67% of employees are rated Outstanding, suggesting opportunities to develop more high-performing talent.
--18.67% of employees fall under Needs Improvement, highlighting the need for targeted coaching and employee development.
+  
+27.33% of employees are Achieving, indicating that a significant proportion are meeting performance expectations.
+  
+Only 6.67% of employees are rated Outstanding, suggesting opportunities to develop more high-performing talent.
+
+18.67% of employees fall under Needs Improvement, highlighting the need for targeted coaching and employee development.
 
 - The organization projects a total bonus payout of $485,381.72, with bonuses awarded based on employee performance.
 
