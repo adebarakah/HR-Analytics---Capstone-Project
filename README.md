@@ -82,7 +82,7 @@ Abbreviations and text (e.g., Actv, ACTIVE, LEFT) was standardized to 'Active' a
 
 - Unnecessary trailing spaces in the Full_Name and Department_code Column was handled Using the Trim & Clean function. → =TRIM(CLEAN(C2))
 
-##Data Transformation & Calculated Columns
+## Data Transformation & Calculated Columns
 - Department names were returned from the Lookup table, Using the XLOOKUP Function,
 	→ (=XLOOKUP(D2,Lookup_Departments!$A$2:$A$7,Lookup_Departments!$B$2:$B$7,"Invalid Dept_Code",0). 
 The department codes served as the look-up value to derive corresponding department names.
