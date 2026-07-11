@@ -141,14 +141,12 @@ Excel did not directly calculate the percentage of employees with a "Left" statu
 
 - Based on the Employee Status Distribution, the analysis shows that the workforce remains largely stable, with 77.33% of employees currently active. Operations experiences the highest employee turnover, with only 62.07% of employees remaining active. An overall attrition rate of 16% was recorded based on employees who have left the organization, while 6.67% resigned voluntarily.
 
--Approximately 77% of employees remain active, demonstrating a healthy workforce stability.
+- Approximately 77% of employees remain active, demonstrating a healthy workforce stability.
 
 →	By Department
 -Operations recorded the highest resignation rate (17.24%) and one of the highest employee exit rates (20.69%), indicating a potential retention concern.
 
 -Marketing has one of the healthiest workforce retention rates, with over 84% of employees remaining active.
-
--Finance reports no resignations, although some employees  left the organization.
 
 -Most departments maintain active employee rates above 77%, indicating generally healthy workforce stability
 
