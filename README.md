@@ -50,6 +50,7 @@ Exploring the data was necessary to determine the cleaning process to be carried
 Before meaningful analysis could be performed, the following steps were followed to clean the data
 
 Step 1: Removed Duplicate Data
+
 The first step was to check for duplicate employee records to avoid incorrect analysis and misleading insights.
 7 records, out of the 157 records were identified as duplicate and removed using the 'Remove Duplicate' feature, leaving us with 150 records to work with. 
 
@@ -72,6 +73,7 @@ Step 3: Handled Missing Values
 	→ =AverageIF(C2:C151,HR01,F2:F151).
 	
 - To handle the mising records in the First Name Column, a new Full_Name column was directly created using the Text Join Function E.g, 		→ =TEXTJOIN(" ",FALSE,B2,C2).
+  
 This produced a single full name combing column B2 & C2 while automatically inserting a space between both names and leaving the Last name as the full name for missing records. This was done to avoid fabricating employee information. Combining employing names was also necessary to improve readability and reporting.
 
 Step 4: Standardized Text Values
@@ -102,13 +104,13 @@ The department codes served as the look-up value to derive corresponding departm
 
 ## Challenges Encountered 
 - One of the main challenges was dealing with incomplete records. Instead of removing incomplete records—which would have led to incomplete dataset and biased analysis:
-I used average imputation where appropriate and only . 
+I used average imputation where appropriate only. 
 No employee name was fabricated.
 
-- Hidden spaces and varying text cases initially affected lookup results, but applying the TRIM, CLEAN, and PROPER functions resolved these issues.
+- Hidden spaces initially affected lookup results, but applying the TRIM, and CLEAN, functions resolved these issues.
   
-- Inconsistent Date format; After formatting cell as Date using the DD/MM/YY format, some date cell was still showing error, 
-This was resolved by changing the location entirely following thestep → 'Cell Format' → Date → Change Located → Date Type to DD/MM/YYYY to maintain consistency. 
+- Inconsistent Date format; After formatting cell as Date using the DD/MM/YY format, some date cell was still showing error. 
+This was resolved by changing the location entirely following thestep → 'Cell Format' → Date → Change Location → Date Type to DD/MM/YYYY to maintain consistency. 
 
 - Another challenge encountered was calculating the attrition rate by department using Pivot Tables. 
 Excel did not directly calculate the percentage of employees with a "Left" status against the total number of employees in each department. To overcome this, all employee status categories (Active, Left, and Resigned) were included in the Pivot Table and the values were displayed as % of Row Total. This allowes to identify the percentage of employees with a "Left" status for each department, which represented the departmental attrition rate (e.g., Operations: 20.69%, Finance: 17.65%, Marketing: 15.79%).
@@ -184,7 +186,7 @@ The organization's average performance score is 68.1, indicating that employee p
 				Exceeding:				14.67%
 				Outstanding:			6.67%
 
-- The largest performance group falls in the in the Developing category.
+- The largest performance group falls in the Developing category.
   
 27.33% of employees are Achieving, indicating that a significant proportion are meeting performance expectations.
   
